@@ -88,7 +88,7 @@ const Registration = () => {
           </h2>
 
           <p className="text-sm text-center dark:text-gray-600">
-            Already have an account?
+            Already have an account?{" "}
             <Link
               to="/login"
               rel="noopener noreferrer"

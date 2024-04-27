@@ -93,7 +93,7 @@ const Login = () => {
           Login to your account
         </h2>
         <p className="text-sm text-center dark:text-gray-600">
-          Dont have account?
+          Don't have account?{" "}
           <Link
             to="/registration"
             rel="noopener noreferrer"
