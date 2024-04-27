@@ -32,7 +32,7 @@ const Slider = () => {
         <SwiperSlide>
           <img
             className="z-[1]"
-            src="https://i.ibb.co/Y7Ztr1W/image02.jpg"
+            src="https://i.ibb.co/pQY8gVF/banner01.webp"
             alt=""
           />
           {/* <div className="z-[2] absolute  max-w-xs rounded-md shadow-md bg-gradient-to-r from-purple-500 to-pink-500">
@@ -46,16 +46,16 @@ const Slider = () => {
                     </div> */}
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://i.ibb.co/X8L6wkv/image01.webp" alt="" />{" "}
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://i.ibb.co/41wbWHw/image03.jpg" alt="" />{" "}
-        </SwiperSlide>
-        <SwiperSlide>
           <img
-            src="https://i.ibb.co/HFYyPnS/real-estate-asset-classes-hero.jpg"
+            src=" https://i.ibb.co/ZG3RxGb/time-traveler-drawing-ideas.jpg"
             alt=""
           />{" "}
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://i.ibb.co/0Y8Nqnx/banner05.webp" alt="" />{" "}
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="https://i.ibb.co/1b1d2KC/original.jpg" alt="" />{" "}
         </SwiperSlide>
       </Swiper>
     </div>
