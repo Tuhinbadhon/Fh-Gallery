@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-
+import "./Login.css";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import "react-toastify/dist/ReactToastify.css";
@@ -89,7 +89,7 @@ const Login = () => {
       </HelmetProvider>
 
       <div className="mx-auto w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-gray-50 dark:text-gray-800">
-        <h2 className="mb-3 text-3xl font-semibold text-center">
+        <h2 className="mb-3 text-3xl font-semibold text-center text-gradient2">
           Login to your account
         </h2>
         <p className="text-sm text-center dark:text-gray-600">
