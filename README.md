@@ -12,7 +12,7 @@
 
 4. Responsive Design: Our website is optimized for various devices, including desktops, tablets, and smartphones, ensuring seamless access and functionality across all platforms. Whether users are browsing from home or on the go, they can easily explore Our listings.
 
-5.Online Store: Provide an online shop where visitors can purchase artworks directly. Include high-quality images of each piece, along with detailed descriptions and pricing information. Ensure a smooth and secure checkout process.
+5. Online Store: Provide an online shop where visitors can purchase artworks directly. Include high-quality images of each piece, along with detailed descriptions and pricing information. Ensure a smooth and secure checkout process.
 
 # Selected Category : Painting and Drawing
 

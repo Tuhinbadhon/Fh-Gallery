@@ -60,7 +60,7 @@ const AgentsAppointment = () => {
         </div>
         <div className="flex flex-col space-y-4 my-auto glass text-white p-4 rounded-2xl">
           <h2 className="text-2xl font-semibold">Kate Winslet</h2>
-          <span className="text-lg dark:text-gray-100">Property Lawyer</span>
+          <span className="text-lg dark:text-gray-100">Company Agent</span>
         </div>
       </div>
       {/* agent card -3 */}

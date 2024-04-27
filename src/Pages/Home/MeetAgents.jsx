@@ -107,7 +107,7 @@ const MeetAgents = () => {
                 Kate Winslet
               </h2>
               <p className="px-5 text-xs sm:text-base dark:text-gray-600">
-                Property Lawyer
+                Company Agent
               </p>
             </div>
             <Link to="agent/2">

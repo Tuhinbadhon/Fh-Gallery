@@ -11,6 +11,9 @@ import Login from "../Pages/Login/Login";
 import PrivateRoutes from "../Pages/PrivetRoutes/PrivetRoutes";
 import PrivateRoutes2 from "../Pages/PrivetRoutes/PrivetRoutes2";
 import Appointment from "../Pages/Appoinment/Appoinment";
+import AllArtItems from "../components/AllArt&CraftItems/AllArtItems";
+import AddCraftItems from "../Pages/AddCraftItems/AddCraftItems";
+import ArtCraftList from "../Pages/ArtCraftList/ArtCraftList";
 
 const router = createBrowserRouter([
   {
@@ -21,11 +24,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        // loader:()=>fetch('/estatesData.json')
       },
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/allitems",
+        element: <AllArtItems />,
       },
       {
         path: "/registration",
@@ -48,6 +54,22 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoutes>
             <UpdateProfile />
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/addcraftitem",
+        element: (
+          <PrivateRoutes>
+            <AddCraftItems />
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/art&craftlist",
+        element: (
+          <PrivateRoutes>
+            <ArtCraftList />
           </PrivateRoutes>
         ),
       },

@@ -14,21 +14,22 @@ const Registration = () => {
   const [registerError, setRegisterError] = useState("");
   const [showPass, setShowpass] = useState(false);
   const [showButton, setShowButton] = useState(true);
+  const [isLoading, setIsLoading] = useState(false); // State for loading indicator
 
   const authInfo = useContext(AuthContext);
   const { createUser } = authInfo;
-  //console.log(authInfo);
 
   const helmetContext = {};
 
   const registerFormHandler = (e) => {
     e.preventDefault();
+    setIsLoading(true); // Show loading indicator
+
     const name = e.target.name.value;
     const photoURL = e.target.photoURL.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    //create user from firebase by AuthProvider
     if (!/(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{6,}/.test(password)) {
       const errorMessage =
         "Password must have at least one uppercase letter, one lowercase letter and one number and it must be minimum 6 characters";
@@ -37,13 +38,14 @@ const Registration = () => {
         text: errorMessage,
         icon: "error",
       });
+      setIsLoading(false); // Hide loading indicator
       return;
     }
 
     createUser(email, password)
       .then((result) => {
         Swal.fire({
-          text: "Successfuly Registered",
+          text: "Successfully Registered",
           icon: "success",
         });
         updateProfile(result.user, {
@@ -61,12 +63,14 @@ const Registration = () => {
         e.target.reset();
         setShowpass(false);
         setShowButton(true);
+        setIsLoading(false); // Hide loading indicator
       })
       .catch((error) => {
         Swal.fire({
           text: error.message,
           icon: "error",
         });
+        setIsLoading(false); // Hide loading indicator
       });
   };
 
@@ -180,7 +184,7 @@ const Registration = () => {
                         font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50"
               disabled={showButton}
             >
-              Register
+              {isLoading ? "Loading..." : "Register"}
             </button>
           </form>
         </div>

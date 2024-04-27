@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { LuLogIn, LuLogOut } from "react-icons/lu";
+import { MdAppRegistration } from "react-icons/md";
 
 defineElement(lottie.loadAnimation);
 
@@ -47,18 +48,26 @@ const Navbar = () => {
           Home
         </Link>
       </li>
+
+      <li>
+        <Link to="/allitems" onClick={() => setIsDropdownOpen(false)}>
+          All Art & Craft Items
+        </Link>
+      </li>
+
       {user ? (
         <>
           <li>
-            <Link to="/profile" onClick={() => setIsDropdownOpen(false)}>
-              View Profile
+            <Link to="/addcraftitem" onClick={() => setIsDropdownOpen(false)}>
+              Add Craft Items
             </Link>
           </li>
           <li>
-            <Link to="/updateprofile" onClick={() => setIsDropdownOpen(false)}>
-              Update Profile
+            <Link to="/art&craftlist" onClick={() => setIsDropdownOpen(false)}>
+              My Art&Craft List
             </Link>
           </li>
+
           <li>
             <Link to="/Appointment/0" onClick={() => setIsDropdownOpen(false)}>
               Appointment
@@ -66,11 +75,7 @@ const Navbar = () => {
           </li>
         </>
       ) : (
-        <li>
-          <Link to="/registration" onClick={() => setIsDropdownOpen(false)}>
-            Registration
-          </Link>
-        </li>
+        ""
       )}
     </>
   );
@@ -218,10 +223,17 @@ const Navbar = () => {
             <>
               <div className="btn btn-ghost btn-circle avatar">{photoIcon}</div>
               <Link to="/login">
-                <button className="btn ">
+                <button className="btn max-[450px]:py-1 max-[450px]:px-2 ">
                   {" "}
-                  <LuLogIn />
+                  <LuLogIn className="max-[450px]:hidden" />
                   Login
+                </button>
+              </Link>
+              <Link to="/registration">
+                <button className="btn max-[450px]:py-1 max-[450px]:px-2 ">
+                  {" "}
+                  <MdAppRegistration className="max-[450px]:hidden" />
+                  Register
                 </button>
               </Link>
             </>
