@@ -62,24 +62,14 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
-          <form className="">
-            <fieldset className="form-control lg:w-80 mx-auto">
-              <label className="label mx-auto mb-2">
-                <span className="label-text">Enter your email address</span>
-              </label>
-              <div class="lg:flex lg:justify-center lg:mx-auto">
-                <input
-                  type="text"
-                  placeholder="username@site.com"
-                  class="w-full lg:w-auto px-4 py-2 mb-2 lg:mr-2 lg:mb-0 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
-                />
-                <button class="w-full lg:w-auto px-4 py-2 bg-blue-500 text-white rounded-md focus:outline-none focus:ring focus:ring-blue-500">
-                  Subscribe
-                </button>
-              </div>
-            </fieldset>
-          </form>
+          <div className="text-center ">
+            <Link
+              to="/"
+              className="btn   btn-ghost lg:text-3xl md:text-2xl font-bold max-[450px]:text-xl bg-gradient-to-r from-green-500 to-[#59C6D2] text-transparent bg-clip-text p-0"
+            >
+              FH GALLERY
+            </Link>
+          </div>
         </div>
       </footer>
       <div className="font-semibold  text-center mb-2 md:mb-8 max-[450px]:pb-5 px-5 lg:mb-14">

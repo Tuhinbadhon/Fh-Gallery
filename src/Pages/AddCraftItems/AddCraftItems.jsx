@@ -62,10 +62,18 @@ const AddCraftItems = () => {
           <title>Add Craft Items</title>
         </Helmet>
       </HelmetProvider>
-      <h2 className="font-bold text-3xl text-center mb-4">
+      <h2
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        className="font-bold text-3xl text-center mb-4"
+      >
         Add Your Items Here
       </h2>
-      <form onSubmit={handleAddItems}>
+      <form
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        onSubmit={handleAddItems}
+      >
         {/* Form image */}
         <div className="md:flex md:mb-6">
           <div className="form-control md:w-full">

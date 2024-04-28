@@ -2,7 +2,7 @@ import React from "react";
 import { CiStar } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-const ItemsCard = ({ item }) => {
+const ItemsCard = ({ item, items, setItems }) => {
   const {
     _id,
     image,
@@ -41,14 +41,16 @@ const ItemsCard = ({ item }) => {
                 text: "Your item has been deleted.",
                 icon: "success",
               });
+              const remaining = items.filter((ite) => ite._id !== _id);
+              setItems(remaining);
             }
           });
       }
     });
   };
   return (
-    <div className="max-[450px]:mx-5 lg:flex bg-base-100 rounded-lg border">
-      <div className="lg:max-w-60 md:w-full max-[450px]:w-full p-3 ">
+    <div className="max-[450px]:mx-5 lg:flex  justify-center items-center bg-base-100 rounded-lg border">
+      <div className="lg:max-w-60 md:w-full  max-[450px]:w-full p-3 ">
         <img src={image} className="rounded-xl" />
       </div>
       <div className="flex justify-between items-center w-full p-3">

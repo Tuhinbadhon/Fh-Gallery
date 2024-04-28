@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import ItemsCard from "../../components/ItemsCard/ItemsCard";
 
 const ArtCraftList = () => {
   const helmetContext = {};
-  const items = useLoaderData();
+  const loadeItems = useLoaderData();
+  const [items, setItems] = useState(loadeItems);
   return (
     <div>
       <HelmetProvider context={helmetContext}>
@@ -26,7 +27,12 @@ const ArtCraftList = () => {
         className="grid md:mx-5 md:grid-cols-2 gap-4 mt-8"
       >
         {items.map((item) => (
-          <ItemsCard key={item._id} item={item} />
+          <ItemsCard
+            key={item._id}
+            item={item}
+            items={items}
+            setItems={setItems}
+          />
         ))}
       </div>
     </div>
