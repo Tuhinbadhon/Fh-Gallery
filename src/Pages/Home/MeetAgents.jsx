@@ -27,9 +27,10 @@ const MeetAgents = () => {
           data-aos-easing="ease-in-sine"
           className="text-sm lg:text-lg font-normal mt-6 mb-6"
         >
-          Embark on your real estate journey with our team of dedicated experts,
-          poised to navigate every step alongside you. Meet our seasoned agents
-          today, and let us unlock the doors to your dream property.
+          Begin your artistic journey with our team of dedicated craft
+          enthusiasts, ready to guide you through every step of the creative
+          process. Meet our seasoned artisans today and let us unlock the doors
+          to your crafting dreams.
         </p>
       </div>
 
