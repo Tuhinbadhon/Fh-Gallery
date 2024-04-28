@@ -172,12 +172,12 @@ const Appointment = () => {
                   <option disabled selected>
                     What do you want to discuss about?
                   </option>
-                  <option>Selling Property</option>
-                  <option>Buying Property</option>
+                  <option>Selling Art & Craft</option>
+                  <option>Buying Painting</option>
                   <option>Renovation</option>
                   <option>
                     <img src={agentImage} alt="" />
-                    Lease Property
+                    Lease Painting
                   </option>
                 </select>
               </div>

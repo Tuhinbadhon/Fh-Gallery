@@ -72,6 +72,7 @@ const router = createBrowserRouter([
             <ArtCraftList />
           </PrivateRoutes>
         ),
+        loader: () => fetch("http://localhost:5000/items"),
       },
 
       {

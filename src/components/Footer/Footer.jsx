@@ -13,10 +13,10 @@ const Footer = () => {
         <div className="w-full flex  lg:flex-row md:flex-row md:justify-between flex-col gap-4 lg:justify-between ">
           <div className="flex flex-col  text-center  ">
             <h6 className="footer-title ">Services</h6>
-            <a className="link link-hover">Plots</a>
-            <a className="link link-hover">Interior Design</a>
+            <a className="link link-hover">Landscape Painting</a>
+            <a className="link link-hover">Portrait Drawing</a>
+            <a className="link link-hover">Watercolour Painting</a>
             <a className="link link-hover">Sell/Buy</a>
-            <a className="link link-hover">Renovation</a>
           </div>
           <div className="flex flex-col gap-1 text-center">
             <h6 className="footer-title">Contacts</h6>

@@ -1,8 +1,10 @@
 import React from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { useLoaderData } from "react-router-dom";
 
 const ArtCraftList = () => {
   const helmetContext = {};
+  const items = useLoaderData();
   return (
     <div>
       <HelmetProvider context={helmetContext}>
@@ -10,7 +12,9 @@ const ArtCraftList = () => {
           <title>My Art & Craft List</title>
         </Helmet>
       </HelmetProvider>
-      <h2>Art and Craftlist here</h2>
+      <h2 className="font-bold text-3xl text-center mb-4">
+        My Art and Craft list : {items.length}
+      </h2>
     </div>
   );
 };
