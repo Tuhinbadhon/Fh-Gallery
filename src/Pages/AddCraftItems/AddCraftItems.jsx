@@ -56,7 +56,7 @@ const AddCraftItems = () => {
   };
   const helmetContext = {};
   return (
-    <div className="bg-[#F4F3F0] p-10">
+    <div className="bg-[#F4F3F0] rounded-xl p-10">
       <HelmetProvider context={helmetContext}>
         <Helmet>
           <title>Add Craft Items</title>
@@ -67,7 +67,7 @@ const AddCraftItems = () => {
       </h2>
       <form onSubmit={handleAddItems}>
         {/* Form image */}
-        <div className="md:flex mb-6">
+        <div className="md:flex md:mb-6">
           <div className="form-control md:w-full">
             <label className="label">
               <span className="label-text"> Image URL</span>
@@ -84,7 +84,7 @@ const AddCraftItems = () => {
           </div>
         </div>
         {/* Form item name */}
-        <div className="md:flex mb-6">
+        <div className="md:flex md:mb-6">
           <div className="form-control md:w-1/2">
             <label className="label">
               <span className="label-text">Item Name</span>
@@ -99,7 +99,7 @@ const AddCraftItems = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2 md:ml-4">
             <label className="label">
               <span className="label-text"> Subcategory Name</span>
             </label>
@@ -115,7 +115,7 @@ const AddCraftItems = () => {
           </div>
         </div>
         {/* Form description */}
-        <div className="md:flex mb-6">
+        <div className="md:flex md:mb-6">
           <div className="form-control md:w-1/2">
             <label className="label">
               <span className="label-text">Short Description</span>
@@ -130,7 +130,7 @@ const AddCraftItems = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2 md:ml-4">
             <label className="label">
               <span className="label-text"> Price</span>
             </label>
@@ -146,7 +146,7 @@ const AddCraftItems = () => {
           </div>
         </div>
         {/* Form rating */}
-        <div className="md:flex mb-6">
+        <div className="md:flex md:mb-6">
           <div className="form-control md:w-1/2">
             <label className="label">
               <span className="label-text"> Rating</span>
@@ -161,7 +161,7 @@ const AddCraftItems = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2 md:ml-4">
             <label className="label">
               <span className="label-text"> Customization</span>
             </label>
@@ -177,7 +177,7 @@ const AddCraftItems = () => {
           </div>
         </div>
         {/* Form Processing time */}
-        <div className="md:flex mb-6">
+        <div className="md:flex md:mb-6">
           <div className="form-control md:w-1/2">
             <label className="label">
               <span className="label-text"> Processing Time</span>
@@ -192,7 +192,7 @@ const AddCraftItems = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2 md:ml-4">
             <label className="label">
               <span className="label-text"> StockStatus</span>
             </label>
@@ -208,7 +208,7 @@ const AddCraftItems = () => {
           </div>
         </div>
         {/* Form Email */}
-        <div className="md:flex mb-6">
+        <div className="md:flex md:mb-6">
           <div className="form-control md:w-1/2">
             <label className="label">
               <span className="label-text">User Email</span>
@@ -223,7 +223,7 @@ const AddCraftItems = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2 md:ml-4">
             <label className="label">
               <span className="label-text"> User Name</span>
             </label>
@@ -242,7 +242,7 @@ const AddCraftItems = () => {
         <input
           type="submit"
           value="ADD ITEM"
-          className="btn btn-block bg-gray-600 text-white hover:bg-green-600 "
+          className="btn btn-block bg-gray-600 max-[450px]:mt-5 text-white hover:bg-green-600 "
         />
       </form>
     </div>

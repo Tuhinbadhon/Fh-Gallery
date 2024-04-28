@@ -14,6 +14,7 @@ import Appointment from "../Pages/Appoinment/Appoinment";
 import AllArtItems from "../components/AllArt&CraftItems/AllArtItems";
 import AddCraftItems from "../Pages/AddCraftItems/AddCraftItems";
 import ArtCraftList from "../Pages/ArtCraftList/ArtCraftList";
+import UpdateItems from "../components/UpdateItems/UpdateItems";
 
 const router = createBrowserRouter([
   {
@@ -76,8 +77,14 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/property/:id",
-        element: <PrivateRoutes></PrivateRoutes>,
+        path: "updateitems/:id",
+        element: (
+          <PrivateRoutes>
+            <UpdateItems />
+          </PrivateRoutes>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/items/${params.id}`),
       },
 
       {
