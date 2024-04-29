@@ -69,8 +69,8 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link to="/Appointment/0" onClick={() => setIsDropdownOpen(false)}>
-              Appointment
+            <Link to="/profile" onClick={() => setIsDropdownOpen(false)}>
+              View Profile
             </Link>
           </li>
         </>
