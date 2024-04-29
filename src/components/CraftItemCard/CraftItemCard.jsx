@@ -37,14 +37,14 @@ const CraftItemCard = ({ item, items, setItems }) => {
   return (
     <div data-aos="fade-up" data-aos-duration="1000" className="">
       <div className="card bg-base-100 h-full w-auto  shadow-xl">
-        <figure className="px-5 h-full pt-5">
+        <figure className="px-4 h-full pt-4">
           <img
             src={image}
             alt="Shoes"
-            className="max-h-44  max-[450px]:max-h-full md:max-h-52 w-full  rounded-xl"
+            className="max-h-44  max-[450px]:max-h-full md:max-h-64 w-full  rounded-xl"
           />
         </figure>
-        <div className=" p-5">
+        <div className=" p-4">
           <h2 className="card-title">{item_name}</h2>
           <div className="">
             <p>

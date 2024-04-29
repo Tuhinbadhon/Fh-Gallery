@@ -14,9 +14,13 @@ const CraftItemDetails = () => {
           <title>{items.item_name}</title>
         </Helmet>
       </HelmetProvider>
-      <div className="card lg:card-side bg-base-100 shadow-xl">
+      <div className="md:flex bg-base-100 shadow-xl">
         <figure className=" ">
-          <img src={items.image} alt="Album" className="p-4  " />
+          <img
+            src={items.image}
+            alt="Album"
+            className="p-4  md:max-w-96 lg:max-w-[550px] lg:max-h-[400px] "
+          />
         </figure>
         <div className="card-body">
           <div className="flex flex-row justify-between">
@@ -44,7 +48,9 @@ const CraftItemDetails = () => {
           </p>
 
           <Link to="/" className="card-actions justify-end mt-4">
-            <button className="btn w-full btn-primary">Show All</button>
+            <button className="btn w-full bg-indigo-400 text-white hover:bg-indigo-300">
+              Show All
+            </button>
           </Link>
         </div>
       </div>
