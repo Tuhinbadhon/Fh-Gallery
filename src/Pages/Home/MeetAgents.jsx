@@ -11,20 +11,15 @@ const MeetAgents = () => {
       {/* paragraph section */}
       <div className="text-center max-w-screen-sm mx-auto px-2 lg:px-0 mb-6">
         <h1
-          data-aos="fade-down"
+          data-aos="fade-left"
           data-aos-duration="1000"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
           className="text-lg font-medium lg:text-3xl lg:font-bold  mt-6 lg:mt-20 "
         >
-          Meet Our Agents
+          Meet Our Members
         </h1>
         <p
-          data-aos="fade-right"
-          data-aos-delay="1000"
+          data-aos="fade-up"
           data-aos-duration="1000"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
           className="text-sm lg:text-lg font-normal mt-6 mb-6"
         >
           Begin your artistic journey with our team of dedicated craft
@@ -49,7 +44,7 @@ const MeetAgents = () => {
                 Leonardo DiCaprio
               </h2>
               <p className="px-5 text-xs sm:text-base dark:text-gray-600">
-                Company Agent
+                CEO
               </p>
             </div>
             <Link to="agent/1">
@@ -108,7 +103,7 @@ const MeetAgents = () => {
                 Kate Winslet
               </h2>
               <p className="px-5 text-xs sm:text-base dark:text-gray-600">
-                Company Agent
+                COM
               </p>
             </div>
             <Link to="agent/2">
@@ -163,9 +158,7 @@ const MeetAgents = () => {
           <div className="space-y-4 text-center divide-y dark:divide-gray-300">
             <div className="my-2 space-y-1">
               <h2 className="text-xl font-semibold sm:text-2xl">Johnny Depp</h2>
-              <p className="px-5 text-xs sm:text-base dark:text-gray-600">
-                Company Agent
-              </p>
+              <p className="px-5 text-xs sm:text-base dark:text-gray-600">GM</p>
             </div>
             <Link to="agent/3">
               <button className="btn bg-indigo-400 text-white hover:bg-indigo-200 hover:text-black rounded-3xl">

@@ -50,8 +50,11 @@ const ItemsCard = ({ item, items, setItems }) => {
   };
   return (
     <div className="max-[450px]:mx-5 lg:flex  justify-center items-center bg-base-100 rounded-lg border">
-      <div className="lg:max-w-60 md:w-full  max-[450px]:w-full p-3 ">
-        <img src={image} className="rounded-xl" />
+      <div className="lg:max-w-60  md:w-full  max-[450px]:w-full p-3 ">
+        <img
+          src={image}
+          className=" max-h-44 max-[450px]:max-h-full md:max-h-52 w-full  rounded-xl"
+        />
       </div>
       <div className="flex justify-between items-center w-full p-3">
         <div className="">

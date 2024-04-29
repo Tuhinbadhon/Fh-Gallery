@@ -15,6 +15,8 @@ import AllArtItems from "../components/AllArt&CraftItems/AllArtItems";
 import AddCraftItems from "../Pages/AddCraftItems/AddCraftItems";
 import ArtCraftList from "../Pages/ArtCraftList/ArtCraftList";
 import UpdateItems from "../components/UpdateItems/UpdateItems";
+import CraftItem from "../components/CraftItems/CraftItem";
+import CraftItemDetails from "../components/CraftItemCard/CraftItemDetails";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +27,9 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: () => fetch("http://localhost:5000/items"),
       },
+
       {
         path: "/login",
         element: <Login />,
@@ -86,7 +90,25 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/items/${params.id}`),
       },
-
+      {
+        path: "/craftitems",
+        element: (
+          <PrivateRoutes>
+            <CraftItem />
+          </PrivateRoutes>
+        ),
+        loader: () => fetch("http://localhost:5000/items"),
+      },
+      {
+        path: "/craftitems/:id",
+        element: (
+          <PrivateRoutes>
+            <CraftItemDetails />
+          </PrivateRoutes>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/items/${params.id}`),
+      },
       {
         path: "/agent/:id",
         element: (

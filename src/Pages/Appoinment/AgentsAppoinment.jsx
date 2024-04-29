@@ -9,7 +9,11 @@ const AgentsAppointment = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div
+      data-aos="fade-left"
+      data-aos-duration="1000"
+      className="flex flex-col gap-4"
+    >
       {/* Show selected agent name */}
 
       {selectedAgent && (
@@ -20,8 +24,6 @@ const AgentsAppointment = () => {
 
       {/* agent card -1 */}
       <div
-        data-aos="fade-left"
-        data-aos-duration="1000"
         className={`rounded-2xl max-w-sm p-2 hover:cursor-pointer sm:flex sm:space-x-6 bg-accent dark:bg-gray-500 dark:text-gray-800 ${
           selectedAgent === "Leonardo DiCaprio"
             ? "border-2 border-blue-500"
@@ -38,14 +40,11 @@ const AgentsAppointment = () => {
         </div>
         <div className="flex flex-col space-y-4 my-auto glass p-4 rounded-2xl text-white">
           <h2 className="text-2xl font-semibold">Leonardo DiCaprio</h2>
-          <span className="text-lg dark:text-gray-100">Company Agent</span>
+          <span className="text-lg dark:text-gray-100">CEO</span>
         </div>
       </div>
       {/* agent card -2 */}
       <div
-        data-aos="fade-left"
-        data-aos-delay="200"
-        data-aos-duration="1000"
         className={`rounded-2xl max-w-sm p-2 hover:cursor-pointer sm:flex sm:space-x-6 bg-accent dark:bg-gray-500 dark:text-gray-800 ${
           selectedAgent === "Kate Winslet" ? "border-2 border-blue-500" : ""
         }`}
@@ -60,14 +59,11 @@ const AgentsAppointment = () => {
         </div>
         <div className="flex flex-col space-y-4 my-auto glass text-white p-4 rounded-2xl">
           <h2 className="text-2xl font-semibold">Kate Winslet</h2>
-          <span className="text-lg dark:text-gray-100">Company Agent</span>
+          <span className="text-lg dark:text-gray-100">COM</span>
         </div>
       </div>
       {/* agent card -3 */}
       <div
-        data-aos="fade-left"
-        data-aos-delay="300"
-        data-aos-duration="1000"
         className={`rounded-2xl max-w-sm p-2 hover:cursor-pointer sm:flex sm:space-x-6 bg-accent dark:bg-gray-500 dark:text-gray-800 ${
           selectedAgent === "Johnny Depp" ? "border-2 border-blue-500" : ""
         }`}
@@ -82,7 +78,7 @@ const AgentsAppointment = () => {
         </div>
         <div className="flex flex-col space-y-4 my-auto glass text-white p-4 rounded-2xl">
           <h2 className="text-2xl font-semibold">Johnny Depp</h2>
-          <span className="text-lg dark:text-gray-100">Company Agent</span>
+          <span className="text-lg dark:text-gray-100">GM</span>
         </div>
       </div>
     </div>

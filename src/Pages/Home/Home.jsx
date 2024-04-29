@@ -5,6 +5,7 @@ import Slider from "./Slider/Slider";
 import MeetAgents from "./MeetAgents";
 import FAQ from "./FAQ";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import CraftItem from "../../components/CraftItems/CraftItem";
 
 const Home = () => {
   const helmetContext = {};
@@ -17,6 +18,9 @@ const Home = () => {
       </HelmetProvider>
       <div className="mt-5 mb-10">
         <Slider></Slider>
+      </div>
+      <div className="mt-5 mb-10">
+        <CraftItem></CraftItem>
       </div>
 
       <div className="mt-5 mb-10">
