@@ -36,7 +36,7 @@ const CraftItemCard = ({ item, items, setItems }) => {
   };
   return (
     <div data-aos="fade-up" data-aos-duration="1000" className="">
-      <div className="card bg-base-100 h-full w-auto  shadow-xl">
+      <div className="card bg-base-100 h-full   shadow-xl">
         <figure className="px-4 h-full pt-4">
           <img
             src={image}

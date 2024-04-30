@@ -19,7 +19,7 @@ const CraftItemDetails = () => {
           <img
             src={items.image}
             alt="Album"
-            className="p-4  md:max-w-96 lg:max-w-[550px] lg:max-h-[400px] "
+            className="p-4  md:max-w-96 lg:max-w-[700px] lg:max-h-[500px] "
           />
         </figure>
         <div className="card-body">
@@ -46,7 +46,14 @@ const CraftItemDetails = () => {
             {" "}
             <b>Customization:</b> {items.customization}
           </p>
-
+          <p>
+            <b>User Email: </b>
+            {items.user_email}
+          </p>
+          <p>
+            <b>User Name: </b>
+            {items.user_name}
+          </p>
           <Link to="/" className="card-actions justify-end mt-4">
             <button className="btn w-full bg-indigo-400 text-white hover:bg-indigo-300">
               Show All

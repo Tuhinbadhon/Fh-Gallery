@@ -6,6 +6,7 @@ import MeetAgents from "./MeetAgents";
 import FAQ from "./FAQ";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import CraftItem from "../../components/CraftItems/CraftItem";
+import ArtAndCraft from "../../components/ArtAndCraft/ArtAndCraft";
 
 const Home = () => {
   const helmetContext = {};
@@ -21,6 +22,9 @@ const Home = () => {
       </div>
       <div className="mt-5 mb-10">
         <CraftItem></CraftItem>
+      </div>
+      <div className="mt-5 mb-10">
+        <ArtAndCraft />
       </div>
 
       <div className="mt-5 mb-10">
