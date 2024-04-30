@@ -17,6 +17,7 @@ import ArtCraftList from "../Pages/ArtCraftList/ArtCraftList";
 import UpdateItems from "../components/UpdateItems/UpdateItems";
 import CraftItem from "../components/CraftItems/CraftItem";
 import CraftItemDetails from "../components/CraftItemCard/CraftItemDetails";
+import CategoryPage from "../components/ArtAndCraft/CategoryPage";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:5000/items"),
+        loader: () => fetch("https://server-side-puce-alpha.vercel.app/items"),
       },
 
       {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       {
         path: "/allitems",
         element: <AllArtItems />,
-        loader: () => fetch("http://localhost:5000/items"),
+        loader: () => fetch("https://server-side-puce-alpha.vercel.app/items"),
       },
       {
         path: "/registration",
@@ -78,7 +79,7 @@ const router = createBrowserRouter([
             <ArtCraftList />
           </PrivateRoutes>
         ),
-        loader: () => fetch("http://localhost:5000/items"),
+        loader: () => fetch("https://server-side-puce-alpha.vercel.app/items"),
       },
 
       {
@@ -89,7 +90,7 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/items/${params.id}`),
+          fetch(`https://server-side-puce-alpha.vercel.app/items/${params.id}`),
       },
       {
         path: "/craftitems",
@@ -98,7 +99,7 @@ const router = createBrowserRouter([
             <CraftItem />
           </PrivateRoutes>
         ),
-        loader: () => fetch("http://localhost:5000/items"),
+        loader: () => fetch("https://server-side-puce-alpha.vercel.app/items"),
       },
       {
         path: "/craftitems/:id",
@@ -108,7 +109,7 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/items/${params.id}`),
+          fetch(`https://server-side-puce-alpha.vercel.app/items/${params.id}`),
       },
       {
         path: "/agent/:id",
@@ -123,6 +124,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoutes>
             <Appointment />
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/category/:id",
+        element: (
+          <PrivateRoutes>
+            <CategoryPage />{" "}
           </PrivateRoutes>
         ),
       },

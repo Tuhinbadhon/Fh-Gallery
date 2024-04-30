@@ -8,7 +8,7 @@ const AllArtItems = () => {
   const [arts, setArts] = useState();
   const { user, loading } = useContext(AuthContext);
   useEffect(() => {
-    fetch("http://localhost:5000/items")
+    fetch("https://server-side-puce-alpha.vercel.app/items")
       .then((res) => res.json())
       .then((data) => {
         setArts(data);
