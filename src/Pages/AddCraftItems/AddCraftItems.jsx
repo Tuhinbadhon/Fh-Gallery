@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const AddCraftItems = () => {
+  const { user } = useContext(AuthContext);
   const handleAddItems = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -15,8 +17,8 @@ const AddCraftItems = () => {
     const customization = form.customization.value;
     const processing_time = form.processing_time.value;
     const stockstatus = form.stockstatus.value;
-    const user_email = form.user_email.value;
-    const user_name = form.user_name.value;
+    const user_email = user.email;
+    const user_name = user.displayName;
 
     const newItem = {
       image,
@@ -223,10 +225,11 @@ const AddCraftItems = () => {
             </label>
             <label className="input-group">
               <input
+                disabled
                 type="text"
                 placeholder="username@mail.com"
                 className="input input-bordered w-full"
-                name="user_email"
+                value={user.email}
                 id=""
               />
             </label>
@@ -237,10 +240,11 @@ const AddCraftItems = () => {
             </label>
             <label className="input-group">
               <input
+                disabled
                 type="text"
                 placeholder="Name"
                 className="input input-bordered w-full"
-                name="user_name"
+                value={user.displayName}
                 id=""
               />
             </label>
