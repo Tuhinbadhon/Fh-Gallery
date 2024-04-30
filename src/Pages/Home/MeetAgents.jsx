@@ -13,9 +13,9 @@ const MeetAgents = () => {
         <h1
           data-aos="fade-left"
           data-aos-duration="1000"
-          className="text-lg font-medium lg:text-3xl lg:font-bold  mt-6 lg:mt-20 "
+          className="text-lg font-medium text-indigo-600 lg:text-3xl lg:font-bold  mt-6 lg:mt-20 "
         >
-          Meet Our Members
+          Meet Our Top Artist
         </h1>
         <p
           data-aos="fade-up"
@@ -44,7 +44,7 @@ const MeetAgents = () => {
                 Leonardo DiCaprio
               </h2>
               <p className="px-5 text-xs sm:text-base dark:text-gray-600">
-                CEO
+                Cartoonists
               </p>
             </div>
             <Link to="agent/1">
@@ -103,7 +103,7 @@ const MeetAgents = () => {
                 Kate Winslet
               </h2>
               <p className="px-5 text-xs sm:text-base dark:text-gray-600">
-                COM
+                Landscape Artist
               </p>
             </div>
             <Link to="agent/2">
@@ -158,7 +158,9 @@ const MeetAgents = () => {
           <div className="space-y-4 text-center divide-y dark:divide-gray-300">
             <div className="my-2 space-y-1">
               <h2 className="text-xl font-semibold sm:text-2xl">Johnny Depp</h2>
-              <p className="px-5 text-xs sm:text-base dark:text-gray-600">GM</p>
+              <p className="px-5 text-xs sm:text-base dark:text-gray-600">
+                Ceramic artist
+              </p>
             </div>
             <Link to="agent/3">
               <button className="btn bg-indigo-400 text-white hover:bg-indigo-200 hover:text-black rounded-3xl">

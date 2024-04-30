@@ -85,14 +85,14 @@ const AllArtItems = () => {
                           <td className="border border-black">
                             {user ? (
                               <Link to={`/craftitems/${art._id}`}>
-                                <button className="btn btn-secondary btn-sm rounded-3xl">
+                                <button className="btn bg-indigo-400 btn-sm rounded-3xl">
                                   View Details
                                 </button>
                               </Link>
                             ) : (
                               <button
                                 onClick={viewDetailsDeny}
-                                className="btn btn-secondary rounded-3xl"
+                                className="btn bg-indigo-400 rounded-3xl"
                               >
                                 View Details
                               </button>

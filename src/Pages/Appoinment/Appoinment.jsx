@@ -59,15 +59,15 @@ const Appointment = () => {
     if (agentId === "1") {
       setAgentName("Leonardo DiCaprio");
       setAgentImage("https://i.ibb.co/xjsyCLx/leo.webp");
-      setAgentDes("CEO");
+      setAgentDes("Cartoonists");
     } else if (agentId === "2") {
       setAgentName("Kate Winslet");
       setAgentImage("https://i.ibb.co/0yqCgPh/kate.jpg");
-      setAgentDes("COM");
+      setAgentDes("Landscape Artist");
     } else if (agentId === "3") {
       setAgentName("Johnny Depp");
       setAgentImage("https://i.ibb.co/FKXPvRS/image11.jpg");
-      setAgentDes("GM");
+      setAgentDes("Ceramic artist");
     } else {
       setShowAgents(true);
     }

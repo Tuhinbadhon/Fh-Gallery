@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const UpdateItems = () => {
+  const { user } = useContext(AuthContext);
   const items = useLoaderData();
   const {
     _id,
@@ -31,8 +33,8 @@ const UpdateItems = () => {
     const customization = form.customization.value;
     const processing_time = form.processing_time.value;
     const stockstatus = form.stockstatus.value;
-    const user_email = form.user_email.value;
-    const user_name = form.user_name.value;
+    const user_email = user.email;
+    const user_name = user.displayName;
 
     const updatedItem = {
       image,
@@ -50,7 +52,7 @@ const UpdateItems = () => {
     console.log(updatedItem);
     //send data to the server
 
-    fetch(`http://localhost:5000/items/${_id}`, {
+    fetch(`https://server-side-puce-alpha.vercel.app/items/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -240,10 +242,11 @@ const UpdateItems = () => {
             </label>
             <label className="input-group">
               <input
+                disabled
                 type="text"
                 placeholder="username@mail.com"
                 className="input input-bordered w-full"
-                name="user_email"
+                value={user.email}
                 defaultValue={user_email}
                 id=""
               />
@@ -255,10 +258,11 @@ const UpdateItems = () => {
             </label>
             <label className="input-group">
               <input
+                disabled
                 type="text"
                 placeholder="Name"
                 className="input input-bordered w-full"
-                name="user_name"
+                value={user.displayName}
                 defaultValue={user_name}
                 id=""
               />
