@@ -3,6 +3,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
+import axios from "axios";
 
 const UpdateItems = () => {
   const { user } = useContext(AuthContext);
@@ -51,18 +52,25 @@ const UpdateItems = () => {
     };
     console.log(updatedItem);
     //send data to the server
-
-    fetch(`https://server-side-puce-alpha.vercel.app/items/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updatedItem),
-    })
-      .then((res) => res.json())
+    axios
+      .put(
+        `https://server-side-puce-alpha.vercel.app/items/${_id}`,
+        updatedItem
+      )
       .then((data) => {
         console.log(data);
-        if (data.modifiedCount > 0) {
+
+        // fetch(`https://server-side-puce-alpha.vercel.app/items/${_id}`, {
+        //   method: "PUT",
+        //   headers: {
+        //     "content-type": "application/json",
+        //   },
+        //   body: JSON.stringify(updatedItem),
+        // })
+        //   .then((res) => res.json())
+        //   .then((data) => {
+        //     console.log(data);
+        if (data.data.modifiedCount > 0) {
           Swal.fire({
             title: "Success!",
             text: "Item Updated Successfully",
@@ -124,14 +132,21 @@ const UpdateItems = () => {
               <span className="label-text"> Subcategory Name</span>
             </label>
             <label className="input-group">
-              <input
-                type="text"
-                placeholder="Subcategory Name"
-                className="input input-bordered w-full"
+              <select
                 name="subcategory"
-                defaultValue={subcategory}
-                id=""
-              />
+                className="input input-bordered"
+                required
+              >
+                <option placeholder="select a category" disabled>
+                  select a category
+                </option>
+                <option value="landscape">Landscape</option>
+                <option value="watercolor">Watercolor</option>
+                <option value="portrait">Portrait</option>
+                <option value="oil">Oil</option>
+                <option value="charcoal">Charcoal</option>
+                <option value="cartoon">Cartoon</option>
+              </select>
             </label>
           </div>
         </div>

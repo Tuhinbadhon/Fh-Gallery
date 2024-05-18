@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import { CiStar } from "react-icons/ci";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import PropTypes from "prop-types";
 import { AuthContext } from "../../Provider/AuthProvider";
 
-const CraftItemCard = ({ item, items, setItems }) => {
+const CraftItemCard = (props) => {
   const navigate = useNavigate();
+  const { item } = props;
   const {
     _id,
     image,
@@ -21,40 +23,42 @@ const CraftItemCard = ({ item, items, setItems }) => {
     user_name,
   } = item;
   const { user } = useContext(AuthContext);
+
   const viewDetailsDeny = () => {
     Swal.fire({
       title: "Please Login to know more",
-      // showDenyButton: true,
       showCancelButton: true,
       confirmButtonText: "Login",
-      // denyButtonText: `Don't save`
     }).then((result) => {
       if (result.isConfirmed) {
         navigate("/login");
       }
     });
   };
+
   return (
-    <div data-aos="fade-up" data-aos-duration="1000" className="">
-      <div className="card bg-base-100 h-full   shadow-xl">
-        <figure className="px-4 h-full pt-4">
+    <div className=" w-96 ">
+      <div className="card  bg-base-100 h-full border shadow-xl">
+        <figure className="px-5 h-full pt-4">
           <img
             src={image}
             alt="Shoes"
-            className="max-h-44  max-[450px]:max-h-full md:max-h-64 w-full  rounded-xl"
+            className="max-h-44 max-[450px]:max-h-full md:max-h-64 w-full rounded-xl"
           />
         </figure>
-        <div className=" p-4">
-          <h2 className="card-title">{item_name}</h2>
-          <div className="">
-            <p>
-              Price: <span className="font-semibold">{price}$</span>
-            </p>
-            <p className="flex gap-1">
-              Rating:{" "}
-              <span className="font-semibold  flex items-center">
-                {rating} <CiStar />{" "}
+        <div className="p-4 items-center text-center mx-auto ">
+          <h2 className="flex gap-2">
+            <b>{item_name}</b>
+
+            <sub>
+              <span className="font-semibold flex items-center">
+                {rating} <CiStar />
               </span>
+            </sub>
+          </h2>
+          <div className="">
+            <p className="">
+              Price: <span className="font-semibold ">{price}$</span>
             </p>
           </div>
           <div>
@@ -68,7 +72,6 @@ const CraftItemCard = ({ item, items, setItems }) => {
           </div>
         </div>
         <div className="px-5 pb-5">
-          {" "}
           {user ? (
             <Link to={`/craftitems/${item._id}`}>
               <button className="btn bg-indigo-400 w-full text-white rounded-xl">
@@ -87,6 +90,12 @@ const CraftItemCard = ({ item, items, setItems }) => {
       </div>
     </div>
   );
+};
+
+CraftItemCard.propTypes = {
+  item: PropTypes.object.isRequired,
+  items: PropTypes.array.isRequired,
+  setItems: PropTypes.func.isRequired,
 };
 
 export default CraftItemCard;

@@ -2,9 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layouts/MainLayout";
 import Home from "../Pages/Home/Home";
 import Registration from "../Pages/Registration/Registration";
-
 import Profile from "../Pages/Profile/Profile";
-
 import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 import ErrorPage from "../components/Error/ErrorPage";
 import Login from "../Pages/Login/Login";
@@ -83,7 +81,7 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "updateitems/:id",
+        path: "/updateitems/:id",
         element: (
           <PrivateRoutes>
             <UpdateItems />

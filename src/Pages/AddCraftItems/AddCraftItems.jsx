@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
+import axios from "axios";
 
 const AddCraftItems = () => {
   const { user } = useContext(AuthContext);
@@ -35,18 +36,22 @@ const AddCraftItems = () => {
     };
     console.log(newItem);
     //send data to the server
-
-    fetch("https://server-side-puce-alpha.vercel.app/items", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newItem),
-    })
-      .then((res) => res.json())
+    axios
+      .post("https://server-side-puce-alpha.vercel.app/items", newItem)
       .then((data) => {
         console.log(data);
-        if (data.insertedId) {
+
+        // fetch("https://server-side-puce-alpha.vercel.app/items", {
+        //   method: "POST",
+        //   headers: {
+        //     "content-type": "application/json",
+        //   },
+        //   body: JSON.stringify(newItem),
+        // })
+        //   .then((res) => res.json())
+        //   .then((data) => {
+        //     console.log(data); // Log the response from the server
+        if (data.data.insertedId) {
           Swal.fire({
             title: "Success!",
             text: "Item Added Successfully",
@@ -58,7 +63,7 @@ const AddCraftItems = () => {
   };
   const helmetContext = {};
   return (
-    <div className="bg-[#F4F3F0] rounded-xl p-10">
+    <div className="bg-[#F4F3F0] rounded-xl p-5  md:p-10">
       <HelmetProvider context={helmetContext}>
         <Helmet>
           <title>Add Craft Items</title>
@@ -114,13 +119,21 @@ const AddCraftItems = () => {
               <span className="label-text"> Subcategory Name</span>
             </label>
             <label className="input-group">
-              <input
-                type="text"
-                placeholder="Subcategory Name"
-                className="input input-bordered w-full"
+              <select
                 name="subcategory"
-                id=""
-              />
+                className="input input-bordered"
+                required
+              >
+                <option placeholder="select a category" disabled>
+                  select a category
+                </option>
+                <option value="landscape">Landscape</option>
+                <option value="watercolor">Watercolor</option>
+                <option value="portrait">Portrait</option>
+                <option value="oil">Oil</option>
+                <option value="charcoal">Charcoal</option>
+                <option value="cartoon">Cartoon</option>
+              </select>
             </label>
           </div>
         </div>

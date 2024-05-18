@@ -1,14 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
-
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const CategoryPage = () => {
   const { user, loading } = useContext(AuthContext);
   const { id } = useParams();
   const navigate = useNavigate();
-  const [arts, setArts] = useState();
+  const [arts, setArts] = useState([]);
+
   useEffect(() => {
     fetch("https://server-side-puce-alpha.vercel.app/items")
       .then((res) => res.json())
@@ -17,37 +18,42 @@ const CategoryPage = () => {
         console.log(data);
       });
   }, []);
-
+  const helmetContext = {};
   return (
     <div>
+      <HelmetProvider context={helmetContext}>
+        <Helmet>
+          <title>{id} Category</title>
+        </Helmet>
+      </HelmetProvider>
       {loading ? (
         <span className="loading loading-spinner text-error w-10 h-40"></span>
       ) : (
         <div className="hero min-h-screen bg-base-200 rounded-2xl my-10 max-w-sm md:max-w-md lg:max-w-full md:mx-auto">
           <div className="hero-content flex-col">
             <div className="text-center lg:text-left mb-5">
-              <h1 className="text-5xl font-bold">
+              <h1 className="text-2xl font-bold">
                 Arts & Crafts of {id} category
               </h1>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-full">
               {arts &&
                 arts.map((art) =>
-                  art.category === id ? (
+                  art.subcategory == id ? (
                     <div
                       key={art._id}
-                      className="card card-compact w-auto bg-base-100 shadow-xl text-left"
+                      className="card bg-base-100 h-full   shadow-xl"
                     >
-                      <figure className="w-56 h-56 md:w-60 lg:w-64 mx-auto block">
+                      <figure className="px-4 h-full pt-4">
                         <img
-                          src={image}
+                          src={art.image}
                           alt={art._id}
-                          className="object-cover w-full h-full"
+                          className="max-h-44  max-[450px]:max-h-full md:max-h-64 w-full  rounded-xl"
                         />
                       </figure>
-                      <div className="card-body">
-                        <h2 className="card-title text-secondary ">
-                          {art.itemName}
+                      <div className=" p-4">
+                        <h2 className="card-title  ">
+                          {art.item_name}
                           <div className="badge badge-secondary">
                             <FaStar /> {art.rating}{" "}
                           </div>
@@ -56,7 +62,7 @@ const CategoryPage = () => {
                           {art.description}
                         </p>
                         <p className="text-base md:text-lg lg:text-lg">
-                          <b> Category:</b> {art.category} $
+                          <b> Category:</b> {art.subcategory}
                         </p>
                         <p className="text-base md:text-lg lg:text-lg">
                           <b> Price:</b> {art.price} $
@@ -65,15 +71,15 @@ const CategoryPage = () => {
                           <b> Customization:</b> {art.customization}
                         </p>
                         <p className="text-base md:text-lg lg:text-lg">
-                          <b> Processing Time:</b> {art.processingTime} days
+                          <b> Processing Time:</b> {art.processing_time} days
                         </p>
                         <p className="text-base md:text-lg lg:text-lg">
-                          <b> Stock Status: </b> {art.stock}
+                          <b> Stock Status: </b> {art.stockstatus}
                         </p>
                         <div className=" flex flex-row justify-between max-w-full gap-3">
                           <Link
-                            to={`/craftitem/${art._id}`}
-                            className="btn btn-primary"
+                            to={`/craftitems/${art._id}`}
+                            className="btn w-full mt-2 btn-primary"
                           >
                             <button>View Details</button>
                           </Link>

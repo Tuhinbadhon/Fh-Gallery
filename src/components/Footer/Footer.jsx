@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div data-aos="fade-up" data-aos-duration="1000" className="">
+    <div className="">
       {/* className="" */}
       <footer
         className=" bg-gradient-to-b from-green-100 via-amber-100 to-transparent max-[450px]:py-5

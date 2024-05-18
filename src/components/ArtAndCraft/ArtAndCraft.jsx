@@ -21,13 +21,24 @@ const ArtAndCraft = () => {
   };
 
   return (
-    <div className="mt-20 max-[450px]:mt-5">
+    <div className="mt-20 max-[450px]:mt-14">
       <div
-        data-aos="fade-left"
+        data-aos="fade-up"
         data-aos-duration="1000"
         className="text-center my-10"
       >
         <h1 className="text-3xl font-bold">Arts & Craft Categories</h1>
+      </div>
+      <div className="text-center md:flex md:justify-center md:items-center ">
+        <h2
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          className="md:w-8/12 md:mb-4"
+        >
+          Art and craft categories span various mediums, including painting,
+          sculpture, textiles, and woodworking, offering diverse avenues for
+          creative expression and exploration.
+        </h2>
       </div>
 
       <div
@@ -36,7 +47,7 @@ const ArtAndCraft = () => {
         className="grid md:mt-16 mt-5  h-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto"
       >
         {/* landscape category */}
-        <div className="card bg-base-100 h-full   shadow-xl">
+        <div className="card bg-base-100 h-full border  shadow-xl">
           <figure className="px-4 h-full pt-4">
             <img
               src="https://i.ibb.co/Wg7J930/landscape.jpg"
@@ -67,7 +78,7 @@ const ArtAndCraft = () => {
           </div>
         </div>
         {/* Portrait category */}
-        <div className="card bg-base-100 h-full   shadow-xl">
+        <div className="card bg-base-100 h-full border  shadow-xl">
           <figure className="px-4 h-full pt-4">
             <img
               src="https://i.ibb.co/dBsXVFR/portrait.jpg"
@@ -100,7 +111,7 @@ const ArtAndCraft = () => {
           </div>
         </div>
         {/* Watercolor category */}
-        <div className="card bg-base-100 h-full   shadow-xl">
+        <div className="card bg-base-100 h-full border  shadow-xl">
           <figure className="px-4 h-full pt-4">
             <img
               src="https://i.ibb.co/0p54pCX/Watercolor-Painting.jpg"
@@ -133,7 +144,7 @@ const ArtAndCraft = () => {
           </div>
         </div>
         {/* Oil Painting category */}
-        <div className="card bg-base-100 h-full   shadow-xl">
+        <div className="card bg-base-100 h-full border  shadow-xl">
           <figure className="px-4 h-full pt-4">
             <img
               src="https://i.ibb.co/rsSCZXd/Oil-Painting.jpg"
@@ -161,7 +172,7 @@ const ArtAndCraft = () => {
           </div>
         </div>
         {/* Charcoal category */}
-        <div className="card bg-base-100 h-full   shadow-xl">
+        <div className="card bg-base-100 h-full border  shadow-xl">
           <figure className="px-4 h-full pt-4">
             <img
               src="https://i.ibb.co/Cn0DfCm/Charcoal-Art.jpg"
@@ -194,10 +205,10 @@ const ArtAndCraft = () => {
           </div>
         </div>
         {/* Cartoon category */}
-        <div className="card bg-base-100 h-full   shadow-xl">
+        <div className="card bg-base-100 h-full border  shadow-xl">
           <figure className="px-4 h-full pt-4">
             <img
-              src="https://i.ibb.co/23SgQ4Y/cartoon.jpg"
+              src="https://i.ibb.co/HtMgV83/vector-illustration-of-cartoon-artist-boy-G3-F7-GN.jpg"
               alt="cartoon"
               className="max-h-44  max-[450px]:max-h-full md:max-h-64 w-full  rounded-xl"
             />

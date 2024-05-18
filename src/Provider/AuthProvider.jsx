@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import {
   createUserWithEmailAndPassword,
@@ -14,7 +14,7 @@ import auth from "../../firebase.config";
 export const AuthContext = createContext(null);
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
-// eslint-disable-next-line react/prop-types
+
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -43,11 +43,11 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithPopup(auth, githubProvider);
   };
-  //observe  state change if the user is logged in or not
+
+  // observe state change if the user is logged in or not
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      console.log("current user : ", currentUser);
       setLoading(false);
     });
     return () => {
@@ -70,8 +70,8 @@ const AuthProvider = ({ children }) => {
   );
 };
 
-export default AuthProvider;
+AuthProvider.propTypes = {
+  children: PropTypes.node,
+};
 
-// AuthProvider.PropTypes={
-//     children: PropTypes.node
-// }
+export default AuthProvider;

@@ -118,7 +118,7 @@ const Navbar = () => {
   return (
     <div>
       <ToastContainer />
-      <div className="navbar bg-base-100">
+      <div className="navbar over bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -145,7 +145,7 @@ const Navbar = () => {
             {isDropdownOpen && (
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52 font-semibold text-black"
+                className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52 font-semibold "
               >
                 {navlink}
               </ul>
@@ -169,7 +169,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 font-semibold  text-black">
+          <ul className="menu menu-horizontal px-1 font-semibold  ">
             {navlink}
           </ul>
         </div>

@@ -14,7 +14,7 @@ const FAQ = () => {
             Frequently Asked Questions
           </h1>
           <div
-            data-aos="fade-left"
+            data-aos="fade-up"
             data-aos-delay="1000"
             data-aos-duration="1000"
             data-aos-anchor="#ankor"

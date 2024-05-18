@@ -1,50 +1,78 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import CraftItemCard from "../CraftItemCard/CraftItemCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, EffectCoverflow, Navigation } from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "./CraftItem.css";
 
 const CraftItem = () => {
+  const [loading, setLoading] = useState(true);
   const loadeItems = useLoaderData();
-  console.log(loadeItems);
-  const [items, setItems] = useState(loadeItems);
+
+  useEffect(() => {
+    if (loadeItems) {
+      setLoading(false);
+    }
+  }, [loadeItems]);
 
   return (
-    <div className="max-[450px]:p-4 md:p-5">
-      <h2
-        className="font-bold text-3xl text-center mb-4"
-        data-aos="fade-left"
-        data-aos-duration="1000"
-      >
-        Our Craft Items
-      </h2>
+    <div className="p-5 ">
+      <h2 className="font-bold text-3xl text-center mb-4">Our Craft Items</h2>
 
-      <div className="flex justify-center items-center text-center">
-        <div
-          className="w-8/12 mb-4"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
+      <div className="text-center md:flex md:justify-center md:items-center">
+        <div className="md:w-8/12 mb-4">
           Craft items include woodworking, needlework, and digital design,
           created with tools like needles, paper, or software. These handmade
           pieces, such as knitted scarves or wooden sculptures, reflect the
-          maker's skill and creativity, adding personal touch to homes.
+          maker's skill and creativity, adding a personal touch to homes.
         </div>
       </div>
 
-      <div
-        className="grid  md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
-        {items &&
-          items.map((item) => (
-            <CraftItemCard
-              key={item._id}
-              item={item}
-              items={items}
-              setItems={setItems}
-            />
-          ))}
-      </div>
+      {loading ? (
+        <div className="flex items-center justify-center h-screen">
+          <span className="loading loading-ring loading-xs"></span>
+          <span className="loading loading-ring loading-sm"></span>
+          <span className="loading loading-ring loading-md"></span>
+          <span className="loading loading-ring loading-lg"></span>
+        </div>
+      ) : (
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          loop={"true"}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          navigation={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[EffectCoverflow, Pagination, Navigation]}
+          className="mySwiper"
+        >
+          {loadeItems &&
+            loadeItems.map((item) => (
+              <SwiperSlide>
+                <CraftItemCard
+                  key={item._id}
+                  item={item}
+                  items={loadeItems}
+                  setItems={() => {}}
+                />
+              </SwiperSlide>
+            ))}
+        </Swiper>
+      )}
     </div>
   );
 };

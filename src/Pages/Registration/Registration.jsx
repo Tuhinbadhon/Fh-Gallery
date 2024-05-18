@@ -76,14 +76,14 @@ const Registration = () => {
 
   return (
     <div>
-      <div className="my-10 p-4">
+      <div className="my-10 p-4 ">
         <HelmetProvider context={helmetContext}>
           <Helmet>
             <title>Registration</title>
           </Helmet>
         </HelmetProvider>
-        <div className="mx-auto w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-gray-50 dark:text-gray-800">
-          <h2 class="mb-3 text-3xl font-semibold text-center text-gradient">
+        <div className="mx-auto w-full max-w-md p-4 rounded-xl shadow sm:p-8 bg-gradient-to-r from-blue-200 to-pink-100 ">
+          <h2 className="mb-3 text-3xl font-semibold text-center text-gradient">
             Register NOW!
           </h2>
 
@@ -180,8 +180,8 @@ const Registration = () => {
             </div>
 
             <button
-              className="btn w-full btn-secondary px-8 py-3 
-                        font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50"
+              className="btn w-full  px-8 py-3 
+                        font-semibold rounded-md dark:bg-pink-600 hover:bg-pink-800 dark:text-gray-50"
               disabled={showButton}
             >
               {isLoading ? "Loading..." : "Register"}

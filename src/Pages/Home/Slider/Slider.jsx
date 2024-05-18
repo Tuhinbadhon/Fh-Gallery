@@ -12,11 +12,7 @@ import "./SliderStyle.css";
 import { Pagination, Navigation } from "swiper/modules";
 const Slider = () => {
   return (
-    <div
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      className="max-[450px]:p-3 md:p-3"
-    >
+    <div className="max-[450px]:p-3 overflow-auto md:p-3">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
