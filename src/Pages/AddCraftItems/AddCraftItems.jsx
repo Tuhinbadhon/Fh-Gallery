@@ -36,30 +36,28 @@ const AddCraftItems = () => {
     };
     console.log(newItem);
     //send data to the server
-    axios
-      .post("https://server-side-puce-alpha.vercel.app/items", newItem)
-      .then((data) => {
-        console.log(data);
+    axios.post("https://fhgallery.vercel.app/items", newItem).then((data) => {
+      console.log(data);
 
-        // fetch("https://server-side-puce-alpha.vercel.app/items", {
-        //   method: "POST",
-        //   headers: {
-        //     "content-type": "application/json",
-        //   },
-        //   body: JSON.stringify(newItem),
-        // })
-        //   .then((res) => res.json())
-        //   .then((data) => {
-        //     console.log(data); // Log the response from the server
-        if (data.data.insertedId) {
-          Swal.fire({
-            title: "Success!",
-            text: "Item Added Successfully",
-            icon: "success",
-            confirmButtonText: "OK",
-          });
-        }
-      });
+      // fetch("https://fhgallery.vercel.app/items", {
+      //   method: "POST",
+      //   headers: {
+      //     "content-type": "application/json",
+      //   },
+      //   body: JSON.stringify(newItem),
+      // })
+      //   .then((res) => res.json())
+      //   .then((data) => {
+      //     console.log(data); // Log the response from the server
+      if (data.data.insertedId) {
+        Swal.fire({
+          title: "Success!",
+          text: "Item Added Successfully",
+          icon: "success",
+          confirmButtonText: "OK",
+        });
+      }
+    });
   };
   const helmetContext = {};
   return (

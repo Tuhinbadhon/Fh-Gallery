@@ -75,23 +75,12 @@ const Navbar = () => {
           </li>
         </>
       ) : (
-        ""
+        <li className="md:hidden">
+          <Link to="/login" onClick={() => setIsDropdownOpen(false)}>
+            Login/Register
+          </Link>
+        </li>
       )}
-    </>
-  );
-
-  const photoIcon = (
-    <>
-      <div className="w-10 rounded-full">
-        <lord-icon
-          className="w-full h-full"
-          src="https://cdn.lordicon.com/kthelypq.json"
-          trigger="loop"
-          delay="500"
-          colors="primary:#000"
-          style={{ width: "40px", height: "40px" }}
-        ></lord-icon>
-      </div>
     </>
   );
 
@@ -151,18 +140,18 @@ const Navbar = () => {
               </ul>
             )}
           </div>
-          <div className="flex flex-row w-auto">
+          <div className="flex gap-2 flex-row w-auto">
             <Link to="/">
               {" "}
               <img
-                className="lg:w-12 lg:h-12 md:w-12 md:h-12 w-10 h-10 max-[450px]:hidden"
+                className=" md:w-12 md:h-12 w-full max-[450px]:hidden"
                 src="/logo1.png"
                 alt=""
               />{" "}
             </Link>
             <Link
               to="/"
-              className="btn  btn-ghost lg:text-3xl md:text-2xl font-bold max-[450px]:text-xl bg-gradient-to-r from-green-500 to-[#59C6D2] text-transparent bg-clip-text p-0"
+              className="btn  btn-ghost lg:text-3xl md:text-2xl font-bold max-[450px]:text-2xl bg-gradient-to-r from-green-500 to-[#59C6D2] text-transparent bg-clip-text p-0"
             >
               FH GALLERY
             </Link>
@@ -211,7 +200,7 @@ const Navbar = () => {
                     alt="User Avatar"
                   />
                 ) : (
-                  photoIcon
+                  ""
                 )}
               </div>
               <button className="btn " onClick={logOutHandler}>
@@ -221,16 +210,15 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              <div className="btn btn-ghost btn-circle avatar">{photoIcon}</div>
               <Link to="/login">
-                <button className="btn max-[450px]:py-1 max-[450px]:px-2 ">
+                <button className="btn max-[450px]:py-1 max-[450px]:hidden ">
                   {" "}
                   <LuLogIn className="max-[450px]:hidden" />
                   Login
                 </button>
               </Link>
               <Link to="/registration">
-                <button className="btn max-[450px]:py-1 max-[450px]:px-2 ">
+                <button className="btn max-[450px]:py-1 max-[450px]:hidden ">
                   {" "}
                   <MdAppRegistration className="max-[450px]:hidden" />
                   Register

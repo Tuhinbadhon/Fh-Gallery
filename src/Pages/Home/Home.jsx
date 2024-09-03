@@ -13,9 +13,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          "https://server-side-puce-alpha.vercel.app/items"
-        );
+        const response = await fetch("https://fhgallery.vercel.app/items");
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }

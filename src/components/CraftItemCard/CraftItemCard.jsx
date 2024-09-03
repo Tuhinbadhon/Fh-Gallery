@@ -39,14 +39,14 @@ const CraftItemCard = (props) => {
   return (
     <div className=" w-96 ">
       <div className="card  bg-base-100 h-full border shadow-xl">
-        <figure className="px-5 h-full pt-4">
+        <figure className="px-2 h-full pt-2">
           <img
             src={image}
             alt="Shoes"
             className="max-h-44 max-[450px]:max-h-full md:max-h-64 w-full rounded-xl"
           />
         </figure>
-        <div className="p-4 items-center text-center mx-auto ">
+        <div className="p-2 items-center text-center mx-auto ">
           <h2 className="flex gap-2">
             <b>{item_name}</b>
 
@@ -71,7 +71,7 @@ const CraftItemCard = (props) => {
             </p>
           </div>
         </div>
-        <div className="px-5 pb-5">
+        <div className="px-5 pb-2">
           {user ? (
             <Link to={`/craftitems/${item._id}`}>
               <button className="btn bg-indigo-400 w-full text-white rounded-xl">

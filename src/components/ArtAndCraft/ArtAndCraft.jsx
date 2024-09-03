@@ -41,18 +41,18 @@ const ArtAndCraft = () => {
         </h2>
       </div>
 
-      <div
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        className="grid md:mt-16 mt-5  h-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto"
-      >
+      <div className="grid md:mt-16 mt-5  h-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
         {/* landscape category */}
-        <div className="card bg-base-100 h-full border  shadow-xl">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className="card bg-base-100 h-full border  shadow-xl"
+        >
           <figure className="px-4 h-full pt-4">
             <img
               src="https://i.ibb.co/Wg7J930/landscape.jpg"
               alt="Landscape"
-              className="max-h-44  max-[450px]:max-h-full md:max-h-64 w-full  rounded-xl"
+              className="max-h-52   w-full  rounded-xl"
             />
           </figure>
           <div className="p-4">
@@ -78,12 +78,16 @@ const ArtAndCraft = () => {
           </div>
         </div>
         {/* Portrait category */}
-        <div className="card bg-base-100 h-full border  shadow-xl">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className="card bg-base-100 h-full border  shadow-xl"
+        >
           <figure className="px-4 h-full pt-4">
             <img
               src="https://i.ibb.co/dBsXVFR/portrait.jpg"
               alt="portrait"
-              className="max-h-44  max-[450px]:max-h-full md:max-h-64 w-full  rounded-xl"
+              className="max-h-52  w-full  rounded-xl"
             />
           </figure>
           <div className="p-4">
@@ -111,12 +115,16 @@ const ArtAndCraft = () => {
           </div>
         </div>
         {/* Watercolor category */}
-        <div className="card bg-base-100 h-full border  shadow-xl">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className="card bg-base-100 h-full border  shadow-xl"
+        >
           <figure className="px-4 h-full pt-4">
             <img
               src="https://i.ibb.co/0p54pCX/Watercolor-Painting.jpg"
               alt="watercolor"
-              className="max-h-44  max-[450px]:max-h-full md:max-h-64 w-full  rounded-xl"
+              className="max-h-52 w-full  rounded-xl"
             />
           </figure>
           <div className="p-4">
@@ -144,12 +152,16 @@ const ArtAndCraft = () => {
           </div>
         </div>
         {/* Oil Painting category */}
-        <div className="card bg-base-100 h-full border  shadow-xl">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className="card bg-base-100 h-full border  shadow-xl"
+        >
           <figure className="px-4 h-full pt-4">
             <img
               src="https://i.ibb.co/rsSCZXd/Oil-Painting.jpg"
               alt="Oil Painting"
-              className="max-h-44  max-[450px]:max-h-full md:max-h-64 w-full  rounded-xl"
+              className="max-h-52 w-full  rounded-xl"
             />
           </figure>
           <div className="p-4">
@@ -172,12 +184,16 @@ const ArtAndCraft = () => {
           </div>
         </div>
         {/* Charcoal category */}
-        <div className="card bg-base-100 h-full border  shadow-xl">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className="card bg-base-100 h-full border  shadow-xl"
+        >
           <figure className="px-4 h-full pt-4">
             <img
               src="https://i.ibb.co/Cn0DfCm/Charcoal-Art.jpg"
               alt="Charcoal"
-              className="max-h-44  max-[450px]:max-h-full md:max-h-64 w-full  rounded-xl"
+              className="max-h-52 w-full  rounded-xl"
             />
           </figure>
           <div className="p-4">
@@ -205,12 +221,16 @@ const ArtAndCraft = () => {
           </div>
         </div>
         {/* Cartoon category */}
-        <div className="card bg-base-100 h-full border  shadow-xl">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          className="card bg-base-100 h-full border  shadow-xl"
+        >
           <figure className="px-4 h-full pt-4">
             <img
               src="https://i.ibb.co/HtMgV83/vector-illustration-of-cartoon-artist-boy-G3-F7-GN.jpg"
               alt="cartoon"
-              className="max-h-44  max-[450px]:max-h-full md:max-h-64 w-full  rounded-xl"
+              className="max-h-52 w-full  rounded-xl"
             />
           </figure>
           <div className="p-4">

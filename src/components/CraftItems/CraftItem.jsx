@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import CraftItemCard from "../CraftItemCard/CraftItemCard";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, EffectCoverflow, Navigation } from "swiper/modules";
+import {
+  Pagination,
+  EffectCoverflow,
+  Autoplay,
+  Navigation,
+} from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -41,6 +46,11 @@ const CraftItem = () => {
         </div>
       ) : (
         <Swiper
+          autoplay={{
+            delay: 3000, // 1000 milliseconds = 1 second
+            disableOnInteraction: false,
+            reverseDirection: true,
+          }}
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
@@ -53,11 +63,10 @@ const CraftItem = () => {
             modifier: 1,
             slideShadows: true,
           }}
-          navigation={true}
           pagination={{
             clickable: true,
           }}
-          modules={[EffectCoverflow, Pagination, Navigation]}
+          modules={[EffectCoverflow, Autoplay, Pagination]}
           className="mySwiper"
         >
           {loadeItems &&

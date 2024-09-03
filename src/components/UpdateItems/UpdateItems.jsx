@@ -53,14 +53,11 @@ const UpdateItems = () => {
     console.log(updatedItem);
     //send data to the server
     axios
-      .put(
-        `https://server-side-puce-alpha.vercel.app/items/${_id}`,
-        updatedItem
-      )
+      .put(`https://fhgallery.vercel.app/items/${_id}`, updatedItem)
       .then((data) => {
         console.log(data);
 
-        // fetch(`https://server-side-puce-alpha.vercel.app/items/${_id}`, {
+        // fetch(`https://fhgallery.vercel.app/items/${_id}`, {
         //   method: "PUT",
         //   headers: {
         //     "content-type": "application/json",

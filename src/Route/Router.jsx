@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("https://server-side-puce-alpha.vercel.app/items"),
+        loader: () => fetch("https://fhgallery.vercel.app/items"),
       },
 
       {
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       {
         path: "/allitems",
         element: <AllArtItems />,
-        loader: () => fetch("https://server-side-puce-alpha.vercel.app/items"),
+        loader: () => fetch("https://fhgallery.vercel.app/items"),
       },
       {
         path: "/registration",
@@ -77,7 +77,7 @@ const router = createBrowserRouter([
             <ArtCraftList />
           </PrivateRoutes>
         ),
-        loader: () => fetch("https://server-side-puce-alpha.vercel.app/items"),
+        loader: () => fetch("https://fhgallery.vercel.app/items"),
       },
 
       {
@@ -88,7 +88,7 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`https://server-side-puce-alpha.vercel.app/items/${params.id}`),
+          fetch(`https://fhgallery.vercel.app/items/${params.id}`),
       },
       {
         path: "/craftitems",
@@ -97,7 +97,7 @@ const router = createBrowserRouter([
             <CraftItem />
           </PrivateRoutes>
         ),
-        loader: () => fetch("https://server-side-puce-alpha.vercel.app/items"),
+        loader: () => fetch("https://fhgallery.vercel.app/items"),
       },
       {
         path: "/craftitems/:id",
@@ -107,7 +107,7 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`https://server-side-puce-alpha.vercel.app/items/${params.id}`),
+          fetch(`https://fhgallery.vercel.app/items/${params.id}`),
       },
       {
         path: "/agent/:id",

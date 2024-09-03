@@ -9,11 +9,15 @@ import "swiper/css/navigation";
 import "./SliderStyle.css";
 
 // import required modules
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 const Slider = () => {
   return (
-    <div className="max-[450px]:p-3 overflow-auto md:p-3">
+    <div className="max-[450px]:p-3 overflow-auto ">
       <Swiper
+        autoplay={{
+          delay: 4000, // 1000 milliseconds = 1 second
+          disableOnInteraction: false,
+        }}
         slidesPerView={1}
         spaceBetween={30}
         loop={true}
@@ -21,7 +25,7 @@ const Slider = () => {
           clickable: true,
         }}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Pagination, Autoplay, Navigation]}
         className="mySwiper lg:max-w-full  md:max-w-screen-md sm:max-w-screen-sm  
                 rounded-xl"
       >
@@ -49,9 +53,6 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img src="https://i.ibb.co/0Y8Nqnx/banner05.webp" alt="" />{" "}
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://i.ibb.co/1b1d2KC/original.jpg" alt="" />{" "}
         </SwiperSlide>
       </Swiper>
     </div>

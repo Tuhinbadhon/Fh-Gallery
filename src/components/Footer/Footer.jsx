@@ -5,11 +5,7 @@ const Footer = () => {
   return (
     <div className="">
       {/* className="" */}
-      <footer
-        className=" bg-gradient-to-b from-green-100 via-amber-100 to-transparent max-[450px]:py-5
-      bg-opacity-5  place-items-center w-full gap-4 
-            bg-base-200 text-base-content flex flex-col  lg:pt-20 md:py-10  lg:mb-6 lg:mt-20 mt-5 lg:px-32 px-5 "
-      >
+      <footer className=" bg-base-300  max-[450px]:py-5 place-items-center w-full gap-4 text-base-content flex flex-col  lg:pt-20 md:py-10   lg:mt-20 mt-5 lg:px-32 px-5 ">
         <div className="w-full flex  lg:flex-row md:flex-row md:justify-between flex-col gap-4 lg:justify-between ">
           <div className="flex flex-col  text-center  ">
             <h6 className="footer-title ">Services</h6>
@@ -72,7 +68,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <div className="font-semibold  text-center mb-2 md:mb-8 max-[450px]:pb-5 px-5 lg:mb-14">
+      <div className="font-semibold bg-neutral text-neutral-content  text-center p-5  ">
         <p>
           Copyright © 2024 - All right reserved by{" "}
           <Link
